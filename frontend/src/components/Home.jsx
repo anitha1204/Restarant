@@ -312,7 +312,7 @@ const Home = () => {
 
       <Carousel />
       <p class="text-center text-base lg:text-lg font-bold text-gray-700 mt-2">
-        Call Us: 9865434210 | 044-9876452312 | 9087653412 | Email: user@gmail.com
+        Call Us: 9865434210 | 044-9876452312 | 9087653412 | Email: Maa.greamsroad@gmail.com.com
       </p>
 
       <div className="flex justify-center">
