@@ -81,91 +81,70 @@ const Home = () => {
                 <img src={logo} alt="Logo" className="w-44" />
               </Link>
             </div>
-          
+
             <div className="mt-[500px] text-center lg:mb-[150px]">
               <p className="text-2xl md:text-4xl  lg:mr-[860px]">Best Service Apartment</p>
               <p className="text-2xl md:text-4xl lg:mr-[970px]">in Greams Road</p>
-            
-            <div className="flex flex-col md:flex-row justify-center gap-3 mt-5 lg:mr-[890px] md:space-x-3">
-              <Link to="tel:+919941177234">
-                <button className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80">
-                  CALL NOW
-                </button>
-              </Link>
 
-              <button
-                className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80 w-[115px] ml-[65px] lg:w-40 "
-                onClick={() => {
-                  roomsRef.current?.scrollIntoView({
-                    behavior: "smooth",
-                  }); 
-                }}
-              >
-                BOOK NOW
-              </button>
-            </div>
+              <div className="flex flex-col md:flex-row justify-center gap-3 mt-5 lg:mr-[900px] md:space-x-3">
+                <Link to="tel:+919941177234">
+                  <button className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80">
+                    CALL NOW
+                  </button>
+                </Link>
+
+                <button
+                  className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80 w-[115px] ml-[65px] lg:w-40 "
+                  onClick={() => {
+                    roomsRef.current?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  BOOK NOW
+                </button>
+              </div>
             </div>
             <div className="bg-gray-200 w-5/6 mt-20 rounded-xl text-black p-4 md:p-8 lg:mb-40">
-              <h3 className="text-center text-gray-700 text-lg md:text-xl mb-4 ">
+              <h3 className="text-center text-gray-700 text-lg md:text-xl mb-4">
                 Near by Maa Residency
               </h3>
-              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-2 mb-6 lg:text-center ">
-                <div className="flex items-center rounded-lg cursor-pointer p-2">
-                  <GiCentaurHeart className="text-xl md:text-2xl lg:text-3xl" />
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
-                    Apollo Heart Centre
-                  </h1>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 gap-2 mb-6">
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
+                  <GiCentaurHeart className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Apollo Heart Centre</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2">
-                  <RiVisaFill className="text-xl md:text-2xl lg:text-3xl" />
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-5">
-                    Global Visa Centre
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center mr-4">
+                  <RiVisaFill className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Global Visa Centre</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2">
-                  <LuSchool className="text-xl md:text-2xl lg:text-3xl" />
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
-                    Matriculation School
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
+                  <LuSchool className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Matriculation School</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2">
-                  <GiBank className= "text-xl md:text-2xl lg:text-3xl"/>
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10">
-                    CBS Bank/ATM
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center mr-10">
+                  <GiBank className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">CBS Bank/ATM</h1>
                 </div>
-              </div>
-
-              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-2 mb-6 lg:text-center ">
-                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:mr-8">
-                  <IoRestaurantOutline className="text-xl md:text-2xl lg:text-3xl" />
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-2">
-                    Multi Restaurants
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-6 mr-6">
+                  <IoRestaurantOutline className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Multi Restaurants</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2">
-                  <GrUserPolice className="text-xl md:text-2xl lg:text-3xl" />
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10">
-                    Police Station
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-12 mr-12">
+                  <GrUserPolice className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Police Station</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-10">
-                  <PiMapPin className="text-xl md:text-2xl lg:text-3xl"/>
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
-                    5 Minreact AnnaSalai
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
+                  <PiMapPin className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">5Min react AnnaSalai</h1>
                 </div>
-                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-4">
-                  <MdOutlineSchool className="text-xl md:text-2xl lg:text-3xl"/>
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-12 ">
-                    Ethiraj College
-                  </h1>
+                <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-10 mr-10">
+                  <MdOutlineSchool className="text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Ethiraj College</h1>
                 </div>
               </div>
             </div>
-
-
-          </div>
+         </div>
         </div>
       </section>
       <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-8 lg:px-32 mt-[320px] md:mt-auto lg:mt-40 space-y-2 lg:space-y-0">
@@ -176,7 +155,7 @@ const Home = () => {
           <p className="text-justify mt-8 font-semibold text-sm md:text-base p-3 lg:mr-10">
             Maa Group of Companies is a distinguished name in the world of hospitality. Established in 2018, our journey began with the operation of Hotel MAA Serviced Apartment near Apollo Hospital Greams Road. Over the years, we've expanded to offer a budget-class hotel with 25 keys, catering to budget travelers. In response to the growing demand for luxury at affordable prices, we proudly introduced Maa Grand, redefining the standards of hospitality in Tamil Nadu. Our commitment to excellence and impeccable service has made us the #1 choice for all your hospitality needs. Discover quality, comfort, and affordability with Maa Group of companies. Your satisfaction is our priority.
           </p>
-          <div className="flex items-center gap-2 md:gap-4 cursor-pointer lg:ml-2">
+          <div className="flex items-center gap-2 md:gap-4 cursor-pointer lg:ml-2 ml-3">
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
@@ -191,12 +170,12 @@ const Home = () => {
           <img className="rounded-lg w-full h-auto" src={img} alt="About" />
         </div>
       </div>
-      
-      <img 
-  src={a} 
-  alt="Responsive Image" 
-  className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 lg:ml-[110px] mt-5"
-/>
+
+      <img
+        src={a}
+        alt="Responsive Image"
+        className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 lg:ml-[110px] mt-5"
+      />
 
 
       <h3 className="text-center  font-bold mt-6 lg:mt-[60px] lg:mr-[940px]  text-2xl md:text-4xl text-gray-500">
@@ -207,40 +186,12 @@ const Home = () => {
         alt=""
         className="w-full max-w-[800px] h-auto mx-auto mt-10"
       />
-
-
-      
-
-
-        {/* <div className="flex space-x-4 overflow-x-auto ml-4 md:ml-10 mt-10 gap-4 p-4 lg:ml-24">
-          <div className="text-center flex-shrink-0">
-            <img src={Img5} alt="Double bedroom" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
-            <h3 className="text-lg md:text-xl font-semibold mt-4">Double bedroom</h3>
-          </div>
-          <div className="text-center flex-shrink-0">
-            <img src={Img6} alt="King size single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
-            <h3 className="text-lg md:text-xl font-semibold mt-4">King size single room</h3>
-          </div>
-          <div className="text-center flex-shrink-0">
-            <img src={Img7} alt="Queen size single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
-            <h3 className="text-lg md:text-xl font-semibold mt-4">Queen size single room</h3>
-          </div>
-          <div className="text-center flex-shrink-0">
-            <img src={Img8} alt="Extra Large single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
-            <h3 className="text-lg md:text-xl font-semibold mt-4">Extra Large single room</h3>
-          </div>
-        </div> */}
-        <Rooms/>
-
-  
-
-
+      <Rooms />
 
       <Gallery />
       <p class="text-center text-base lg:text-lg font-bold text-gray-700 mt-8">
         Call Us: 9865434210 | 044-9876452312 | 9087653412 | Email: Maa.greamsroad@gmail.com.com
       </p>
-
       <div className="flex justify-center mt-10">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-start gap-4">
           <div className="w-full lg:w-1/2 p-3">
@@ -319,8 +270,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-
       <TestimonialsCarousel />
 
       {/* Footer */}
