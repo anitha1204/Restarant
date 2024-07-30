@@ -152,13 +152,13 @@ const Home = () => {
                 <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-10">
                   <PiMapPin className="text-xl md:text-2xl lg:text-3xl"/>
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
-                    5Minreact AnnaSalai
+                    5 Minreact AnnaSalai
                   </h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-4">
                   <MdOutlineSchool className="text-xl md:text-2xl lg:text-3xl"/>
-                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10 ">
-                    Exhiraj College
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-12 ">
+                    Ethiraj College
                   </h1>
                 </div>
               </div>
@@ -170,7 +170,7 @@ const Home = () => {
       </section>
       <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-8 lg:px-32 mt-[320px] md:mt-auto lg:mt-40 space-y-2 lg:space-y-0">
         <div className="w-full lg:w-3/4 space-y-4">
-          <h1 className="text-2xl md:text-4xl font-semibold text-center lg:text-left text-gray-500">
+          <h1 className="text-2xl md:text-4xl font-semibold text-center lg:text-left text-gray-500 lg:ml-2">
             Our Vision And Mission
           </h1>
           <p className="text-justify mt-8 font-semibold text-sm md:text-base p-3 lg:mr-10">
