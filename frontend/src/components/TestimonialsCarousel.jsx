@@ -37,13 +37,13 @@ const TestimonialsCarousel = () => {
 
     return (
         <div className="container mx-auto">
-            <h3 className="text-center text-gray-500 text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mt-4">
+            <h3 className="text-center text-gray-500 text-2xl md:text-4xl text-gray-500 font-bold mt-8">
                 Testimonials
             </h3>
             <Slider {...settings} className="">
                 {testimonials.map((testimonial, index) => (
                     <div key={index} className="p-4">
-                        <p className="text-gray-700 text-lg md:text-xl">{testimonial.text}</p>
+                        <p className="text-gray-700 text-sm md:text-lg ">{testimonial.text}</p>
                         <p className="text-right text-gray-500 ">- {testimonial.author}</p>
                     </div>
                 ))}

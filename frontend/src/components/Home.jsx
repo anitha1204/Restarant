@@ -10,32 +10,29 @@ import { PiMapPin } from "react-icons/pi";
 import { MdOutlineSchool } from "react-icons/md";
 import img from "../assets/About.png";
 import { FaStar } from "react-icons/fa6";
-import Img5 from "../assets/Room_4.png";
-import Img6 from "../assets/Gallery_2.png";
-import Img7 from "../assets/Room_1.png";
-import Img8 from "../assets/Room_3.png";
+import img1 from "../assets/img5.png";
+import a from "../assets/img6.png";
 import logo from "../assets/logo_png.png";
-import Carousel from "./Carousel";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import { CiLinkedin } from "react-icons/ci";
+
 import {
-  FaEnvelope,
-  FaMobileAlt,
-  FaMapMarkedAlt,
+
   FaInstagram,
   FaGoogle,
 } from "react-icons/fa";
 import TestimonialsCarousel from "./TestimonialsCarousel";
+import Gallery from "./Gallery";
+import Rooms from "./Rooms";
 
 
 
 const Home = () => {
 
   const roomsRef = useRef(null);
-  const footerRef = useRef(null);
   const [formData, setFormData] = useState({
     userName: "",
     phonNumber: "",
@@ -84,238 +81,167 @@ const Home = () => {
                 <img src={logo} alt="Logo" className="w-44" />
               </Link>
             </div>
-
-            <div className="mt-[400px] text-center ">
-              <p className="text-2xl md:text-4xl ">Best Service Apartment</p>
-              <p className="text-2xl md:text-4xl">in Greams Road</p>
-            </div>
-            <div className="flex flex-col md:flex-row justify-center gap-5 mt-5">
+          
+            <div className="mt-[500px] text-center lg:mb-[150px]">
+              <p className="text-2xl md:text-4xl  lg:mr-[860px]">Best Service Apartment</p>
+              <p className="text-2xl md:text-4xl lg:mr-[970px]">in Greams Road</p>
+            
+            <div className="flex flex-col md:flex-row justify-center gap-3 mt-5 lg:mr-[890px] md:space-x-3">
               <Link to="tel:+919941177234">
                 <button className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80">
                   CALL NOW
                 </button>
               </Link>
 
-
-
               <button
-                className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80"
+                className="px-5 py-2 text-sm md:text-lg bg-black bg-opacity-60 rounded hover:bg-opacity-80 w-[115px] ml-[65px] lg:w-40 "
                 onClick={() => {
                   roomsRef.current?.scrollIntoView({
                     behavior: "smooth",
-                  });
+                  }); 
                 }}
               >
                 BOOK NOW
               </button>
             </div>
-            <div className="bg-gray-200 w-full md:w-2/3 h-45 mt-40 mx-auto rounded p-3 text-black">
-              <h3 className="text-center text-gray-700 text-lg md:text-xl mb-4 md:mb-6 mt-18">
-                Nearby Maa Residency
+            </div>
+            <div className="bg-gray-200 w-5/6 mt-20 rounded-xl text-black p-4 md:p-8 lg:mb-40">
+              <h3 className="text-center text-gray-700 text-lg md:text-xl mb-4 ">
+                Near by Maa Residency
               </h3>
-              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-4 md:gap-2">
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <GiCentaurHeart className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-2 mb-6 lg:text-center ">
+                <div className="flex items-center rounded-lg cursor-pointer p-2">
+                  <GiCentaurHeart className="text-xl md:text-2xl lg:text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
                     Apollo Heart Centre
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <RiVisaFill className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+                <div className="flex items-center rounded-lg cursor-pointer p-2">
+                  <RiVisaFill className="text-xl md:text-2xl lg:text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-5">
                     Global Visa Centre
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <LuSchool className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+                <div className="flex items-center rounded-lg cursor-pointer p-2">
+                  <LuSchool className="text-xl md:text-2xl lg:text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
                     Matriculation School
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <GiBank className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
-                    CBS bank/ATM
-                  </p>
+                <div className="flex items-center rounded-lg cursor-pointer p-2">
+                  <GiBank className= "text-xl md:text-2xl lg:text-3xl"/>
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10">
+                    CBS Bank/ATM
+                  </h1>
                 </div>
               </div>
 
-              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-4 md:gap-2 mb-4 md:mb-10">
-                <div className="flex items-center p-4 md:p-8 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <IoRestaurantOutline className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+              <div className="flex flex-wrap justify-center md:justify-evenly items-center gap-2 mb-6 lg:text-center ">
+                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:mr-8">
+                  <IoRestaurantOutline className="text-xl md:text-2xl lg:text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-2">
                     Multi Restaurants
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <GrUserPolice className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+                <div className="flex items-center rounded-lg cursor-pointer p-2">
+                  <GrUserPolice className="text-xl md:text-2xl lg:text-3xl" />
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10">
                     Police Station
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <PiMapPin className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-10">
+                  <PiMapPin className="text-xl md:text-2xl lg:text-3xl"/>
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">
                     5Minreact AnnaSalai
-                  </p>
+                  </h1>
                 </div>
-                <div className="flex items-center p-2 md:p-3 rounded-lg cursor-pointer w-40 md:w-auto">
-                  <MdOutlineSchool className="text-xl" />
-                  <p className="text-sm md:text-md ml-2 whitespace-nowrap">
+                <div className="flex items-center rounded-lg cursor-pointer p-2 lg:ml-4">
+                  <MdOutlineSchool className="text-xl md:text-2xl lg:text-3xl"/>
+                  <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg mr-10 ">
                     Exhiraj College
-                  </p>
+                  </h1>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>
-      <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-8 lg:px-32 mt-80 md:mt-auto lg:mt-[100px] ">
+      <div className="flex flex-col lg:flex-row justify-between items-center px-4 md:px-8 lg:px-32 mt-[320px] md:mt-auto lg:mt-40 space-y-2 lg:space-y-0">
         <div className="w-full lg:w-3/4 space-y-4">
           <h1 className="text-2xl md:text-4xl font-semibold text-center lg:text-left text-gray-500">
             Our Vision And Mission
           </h1>
-          <p className="text-justify lg:text-left mt-8 font-semibold text-sm md:text-base">
-            Maa Group of Companies is a distinguished name in the world of
-            hospitality. Established in 2018, our journey began with the
-            operation of Hotel MAA Serviced Apartment near Apollo Hospital
-            Greams Road. Over the years, we've expanded to offer a budget-class
-            hotel with 25 keys, catering to budget travelers. In response to the
-            growing demand for luxury at affordable prices, we proudly
-            introduced Maa Grand, redefining the standards of hospitality in
-            Tamil Nadu. Our commitment to excellence and impeccable service has
-            made us the #1 choice for all your hospitality needs. Discover
-            quality, comfort, and affordability with Maa Group of companies.
-            Your satisfaction is our priority.
+          <p className="text-justify mt-8 font-semibold text-sm md:text-base p-3 lg:mr-10">
+            Maa Group of Companies is a distinguished name in the world of hospitality. Established in 2018, our journey began with the operation of Hotel MAA Serviced Apartment near Apollo Hospital Greams Road. Over the years, we've expanded to offer a budget-class hotel with 25 keys, catering to budget travelers. In response to the growing demand for luxury at affordable prices, we proudly introduced Maa Grand, redefining the standards of hospitality in Tamil Nadu. Our commitment to excellence and impeccable service has made us the #1 choice for all your hospitality needs. Discover quality, comfort, and affordability with Maa Group of companies. Your satisfaction is our priority.
           </p>
-          <div className="flex items-center gap-2 md:gap-4 cursor-pointer">
+          <div className="flex items-center gap-2 md:gap-4 cursor-pointer lg:ml-2">
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
             <FaStar className="text-yellow-500" />
-            <p className="ml-2 text-yellow-700 text-md">view reviews</p>
+            <Link to={"https://www.google.com/travel/search?gsas=1&ts=GhwSGhIUCgcI6A8QBxgUEgcI6A8QBxgVGAEyAhAA&qs=MjZDaVFJOWJqVXAtenFvclRHQVJDYXRlNzl0NGU4MlhZYURTOW5MekV4Y25kcU5ucHdkRElRQVE4Ag&ap=ugEHcmV2aWV3cw&sa=X&ved=0CAAQ5JsGahcKEwjoxp-OjLOHAxUAAAAAHQAAAAAQDQ"}>
+              <p className="ml-2 text-yellow-700 text-md">view reviews</p>
+            </Link>
           </div>
         </div>
-        <div className="w-full lg:w-3/4 h-auto p-6 ">
+        <div className="w-full lg:w-3/4 h-auto p-4">
           <img className="rounded-lg w-full h-auto" src={img} alt="About" />
         </div>
       </div>
-      <h3 className="text-center text-gray-500 text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold  md:mb-6">
-        Amenities/Facilities
+      
+      <img 
+  src={a} 
+  alt="Responsive Image" 
+  className="mx-auto w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 lg:ml-[110px] mt-5"
+/>
+
+
+      <h3 className="text-center  font-bold mt-6 lg:mt-[60px] lg:mr-[940px]  text-2xl md:text-4xl text-gray-500">
+        Amenities / Facilities
       </h3>
-      <div className="flex justify-center m-5">
-        <div className="grid grid-cols-4 gap-1 max-w-[800px]">
-          <div className="border-l-0 border-r-2 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Room with kitchen
-          </div>
-          <div className="border-l-0 border-r-2 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Living room
-          </div>
-          <div className="border-l-0 border-r-2 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Dining area
-          </div>
-          <div className="border-l-0 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Sofa
-          </div>
+      <img
+        src={img1}
+        alt=""
+        className="w-full max-w-[800px] h-auto mx-auto mt-10"
+      />
 
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            Balcony
-          </div>
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            Free wifi
-          </div>
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            AC / TV
-          </div>
-          <div className="border-l-0 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Geyser
-          </div>
 
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            Washing Machine
-          </div>
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            Fridge
-          </div>
-          <div className="border-l-0 border-b-2 border-r-2 border-black p-2 text-center text-[chocolate]">
-            24/7 Check in
-          </div>
-          <div className="border-l-0 border-b-2 border-black p-2 text-center text-[chocolate]">
-            Power backup
-          </div>
+      
 
-          <div className="border-l-0 border-b-0 border-r-2 p-2 border-black text-center text-[chocolate]">
-            Desk
-          </div>
-          <div className="border-l-0 border-b-0 border-r-2 p-2  border-black text-center text-[chocolate]">
-            Intercom
-          </div>
-          <div className="border-l-0 border-b-0 border-r-2 p-2 border-black text-center text-[chocolate]">
-            Lift
-          </div>
-          <div className="border-l-0 border-b-0  p-2 text-center border-black text-[chocolate]">
-            Car parking
-          </div>
-        </div>
-      </div>
-      <div ref={roomsRef}>
-        <h3 className="text-center text-gray-500 text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-4 md:mb-6">
-          Rooms
-        </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  mx-4 md:mx-9 cursor-pointer">
-          <div className="flex flex-col items-center rounded-lg shadow-md p-4">
-            <img
-              src={Img5}
-              alt="UK"
-              className="mb-4 rounded-md object-cover w-60 h-60 hover:scale-110 transition-transform duration-300"
-            />
-            <h3 className="text-xl font-semibold mb-4">Double bedroom</h3>
+        {/* <div className="flex space-x-4 overflow-x-auto ml-4 md:ml-10 mt-10 gap-4 p-4 lg:ml-24">
+          <div className="text-center flex-shrink-0">
+            <img src={Img5} alt="Double bedroom" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
+            <h3 className="text-lg md:text-xl font-semibold mt-4">Double bedroom</h3>
           </div>
-          <div className="flex flex-col items-center rounded-lg shadow-md p-4">
-            <img
-              src={Img6}
-              alt="Australia"
-              className="mb-4 rounded-md object-cover w-60 h-60 hover:scale-110 transition-transform duration-300"
-            />
-            <h3 className="text-xl font-semibold mb-4">
-              King size single room
-            </h3>
+          <div className="text-center flex-shrink-0">
+            <img src={Img6} alt="King size single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
+            <h3 className="text-lg md:text-xl font-semibold mt-4">King size single room</h3>
           </div>
-          <div className="flex flex-col items-center rounded-lg shadow-md p-4">
-            <img
-              src={Img7}
-              alt="USA"
-              className="mb-4 rounded-md object-cover w-60 h-60 hover:scale-110 transition-transform duration-300"
-            />
-            <h3 className="text-xl font-semibold mb-4">
-              Queen size single room
-            </h3>
+          <div className="text-center flex-shrink-0">
+            <img src={Img7} alt="Queen size single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
+            <h3 className="text-lg md:text-xl font-semibold mt-4">Queen size single room</h3>
           </div>
-          <div className="flex flex-col items-center rounded-lg shadow-md p-4">
-            <img
-              src={Img8}
-              alt="Canada"
-              className="mb-4 rounded-md object-cover w-60 h-60 hover:scale-110 transition-transform duration-300"
-            />
-            <h3 className="text-xl font-semibold mb-4">
-              Extra Large single room
-            </h3>
+          <div className="text-center flex-shrink-0">
+            <img src={Img8} alt="Extra Large single room" className="w-[240px] md:w-[300px] h-[240px] md:h-[300px] object-cover rounded-lg" />
+            <h3 className="text-lg md:text-xl font-semibold mt-4">Extra Large single room</h3>
           </div>
-        </div>
-      </div>
+        </div> */}
+        <Rooms/>
 
-      <h3 className="text-center text-gray-500 text-xl sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mt-10">
-        Gallery
-      </h3>
+  
 
-      <Carousel />
-      <p class="text-center text-base lg:text-lg font-bold text-gray-700 mt-2">
+
+
+      <Gallery />
+      <p class="text-center text-base lg:text-lg font-bold text-gray-700 mt-8">
         Call Us: 9865434210 | 044-9876452312 | 9087653412 | Email: Maa.greamsroad@gmail.com.com
       </p>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-10">
         <div className="w-full max-w-7xl flex flex-col lg:flex-row justify-between items-start gap-4">
           <div className="w-full lg:w-1/2 p-3">
             <iframe
@@ -333,9 +259,9 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="hidden lg:block border-l-2 border-black h-60"></div>
+          <div className="hidden lg:block border-l-2 border-black h-60 "></div>
 
-          <div className="w-full lg:w-1/2 flex justify-center items-center p-4 bg-gray-100 rounded-lg shadow-md">
+          <div className="w-full lg:w-1/2 flex justify-center items-center p-4 bg-gray-100 rounded-lg shadow-md mt-4">
             <form onSubmit={handleSubmit} className="w-full">
               <div className="flex flex-col md:flex-row justify-between gap-3 mb-4">
                 <input
@@ -398,10 +324,10 @@ const Home = () => {
       <TestimonialsCarousel />
 
       {/* Footer */}
-      <div className="mt-10" ref={roomsRef}>
+      <div className="mt-16" ref={roomsRef}>
         <div className="bg-gray-200 py-10 relative overflow-hidden">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 backdrop-blur-sm rounded-t-xl p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 backdrop-blur-sm rounded-t-xl p-8 lg:ml-40">
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
                 <Link to="/" onClick={() => window.scrollTo(0, 0)}>
                   <img
@@ -419,16 +345,9 @@ const Home = () => {
                   <h1 className="text-xl font-bold mb-3 text-brown-200">
                     CONTACT US
                   </h1>
-                  <div className="flex items-center justify-center md:justify-start gap-5 mb-3 text-[chocolate]">
-
+                  <div className="flex flex-col items-center md:items-start gap-5 mb-3 text-[chocolate]">
                     <p>maa.greamsroad@gmail.com</p>
-                  </div>
-                  <div className="flex items-center justify-center md:justify-start gap-5 mb-3 text-[chocolate]">
-
                     <p>9941177234 | 7200247474</p>
-                  </div>
-                  <div className="flex items-center justify-center md:justify-start gap-6 mb-3 text-[chocolate]">
-
                     <p>
                       NO.160, THIRU BUILDING, 2ND FLOOR, THOUSAND LIGHTS, CHENNAI - 600 006.
                     </p>
@@ -438,28 +357,28 @@ const Home = () => {
                   <h1 className="text-xl font-bold mb-3 text-brown-200">
                     SOCIAL LINKS
                   </h1>
-                  <div className="flex items-center justify-center md:justify-start gap-3 mt-6">
+                  <div className="flex justify-center md:justify-start gap-3 mt-6 text-[chocolate]">
                     <a
                       href="https://www.facebook.com/share/YUAxq7M5WFWwRwJ7/?mibextid=LQQJ4d"
-                      className="text-[chocolate] hover:text-gray-700"
+                      className="hover:text-gray-700"
                     >
                       <RiFacebookBoxLine size={20} className="h-7 w-7" />
                     </a>
                     <a
                       href="https://www.google.co.in/"
-                      className="text-[chocolate] hover:text-gray-700"
+                      className="hover:text-gray-700"
                     >
                       <FaGoogle size={20} className="h-7 w-7" />
                     </a>
                     <a
                       href="https://www.instagram.com/maa_hotels?igsh=MTZmcjBubmMwdDdrbQ%3D%3D&utm_source=qr"
-                      className="text-[chocolate] hover:text-gray-700"
+                      className="hover:text-gray-700"
                     >
                       <FaInstagram size={20} className="h-7 w-7" />
                     </a>
                     <a
                       href="#"
-                      className="text-[chocolate] hover:text-gray-700"
+                      className="hover:text-gray-700"
                     >
                       <CiLinkedin size={20} className="h-7 w-7" />
                     </a>
