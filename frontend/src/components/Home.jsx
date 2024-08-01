@@ -111,35 +111,35 @@ const Home = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 gap-2 mb-6">
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
-                  <GiCentaurHeart className="text-3xl" />
+                  <GiCentaurHeart className="text-lg lg:text-3xl" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Apollo Heart Centre</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center mr-4">
-                  <RiVisaFill className="text-3xl" />
+                  <RiVisaFill className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Global Visa Centre</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
-                  <LuSchool className="text-3xl" />
+                  <LuSchool className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Matriculation School</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center mr-10">
-                  <GiBank className="text-3xl" />
+                  <GiBank className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">CBS Bank/ATM</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-6 mr-6">
-                  <IoRestaurantOutline className="text-3xl" />
+                  <IoRestaurantOutline className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Multi Restaurants</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-12 mr-12">
-                  <GrUserPolice className="text-3xl" />
+                  <GrUserPolice className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Police Station</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center">
-                  <PiMapPin className="text-3xl" />
+                  <PiMapPin className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">5Min react AnnaSalai</h1>
                 </div>
                 <div className="flex items-center rounded-lg cursor-pointer p-2 justify-center lg:mr-10 mr-10">
-                  <MdOutlineSchool className="text-3xl" />
+                  <MdOutlineSchool className="lg:text-3xl text-lg" />
                   <h1 className="text-md ml-2 whitespace-nowrap lg:text-lg">Ethiraj College</h1>
                 </div>
               </div>
@@ -153,7 +153,17 @@ const Home = () => {
             Our Vision And Mission
           </h1>
           <p className="text-justify mt-8 font-semibold text-sm md:text-base p-3 lg:mr-10">
-            Maa Group of Companies is a distinguished name in the world of hospitality. Established in 2018, our journey began with the operation of Hotel MAA Serviced Apartment near Apollo Hospital Greams Road. Over the years, we've expanded to offer a budget-class hotel with 25 keys, catering to budget travelers. In response to the growing demand for luxury at affordable prices, we proudly introduced Maa Grand, redefining the standards of hospitality in Tamil Nadu. Our commitment to excellence and impeccable service has made us the #1 choice for all your hospitality needs. Discover quality, comfort, and affordability with Maa Group of companies. Your satisfaction is our priority.
+            Maa Group of Companies is a distinguished name in the world of
+            hospitality. Established in 2018, our journey began with the
+            operation of Hotel MAA Serviced Apartment near Apollo Hospital
+            Greams Road. Over the years, we've expanded to offer a budget-class
+            hotel with 25 keys, catering to budget travelers. In response to the
+            growing demand for luxury at affordable prices, we proudly
+            introduced Maa Grand, redefining the standards of hospitality in
+            Tamil Nadu. Our commitment to excellence and impeccable service has
+            made us the #1 choice for all your hospitality needs. Discover
+            quality, comfort, and affordability with Maa Group of companies.
+            Your satisfaction is our priority.
           </p>
           <div className="flex items-center gap-2 md:gap-4 cursor-pointer lg:ml-2 ml-3">
             <FaStar className="text-yellow-500" />
@@ -166,9 +176,10 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="w-full lg:w-3/4 h-auto p-4">
-          <img className="rounded-lg w-full h-auto" src={img} alt="About" />
-        </div>
+       <div className="w-[-10px] sm:w-5/6 md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 h-auto p-4">
+  <img className="rounded-lg w-full h-auto object-cover" src={img} alt="About" />
+</div>
+
       </div>
 
       <img
