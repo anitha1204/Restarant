@@ -7,39 +7,39 @@ import Img8 from "../assets/Room_3.png";
 const rooms = [
   {
     id: 1,
-    title: 'Double bedroom',
-    imageUrl: Img5,
-  },
-  {
-    id: 2,
-    title: 'King size single room',
+    title: 'Double Bed / with kitchen',
     imageUrl: Img6,
   },
   {
-    id: 3,
-    title: 'Queen size single room',
+    id: 2,
+    title: 'Tripe Bed / with kitchen',
     imageUrl: Img7,
   },
   {
+    id: 3,
+    title: 'Four Bed / with kitchen',
+    imageUrl: Img5,
+  },
+  {
     id: 4,
-    title: 'Extra large single room',
+    title: 'Suite room',
     imageUrl: Img8,
   },
 ];
 
 const RoomCard = ({ room }) => (
-  <div className="max-w-xs rounded-2xl overflow-hidden shadow-lg m-4">
+  <div className="max-w-xs rounded-xl overflow-hidden shadow-lg m-2 ">
     <img className="w-[300px] object-cover h-[250px]" src={room.imageUrl} alt={room.title} />
     <div className="px-5 py-3 text-center">
-      <div className="font-bold text-lg mb-2">{room.title}</div>
+      <h3 className="font-bold text-lg mb-2">{room.title}</h3>
     </div>
   </div>
 );
 
 const Rooms = () => (
   <div className="container mx-auto px-4">
-    <h1 className="text-2xl md:text-4xl font-bold text-center my-8 text-gray-500">Rooms</h1>
-    <div className="flex flex-wrap justify-center">
+    <h2 className="text-2xl md:text-4xl font-bold text-center my-8 text-gray-500">Rooms</h2>
+    <div className="flex flex-wrap justify-center mb-2">
       {rooms.map(room => (
         <RoomCard key={room.id} room={room} />
       ))}
